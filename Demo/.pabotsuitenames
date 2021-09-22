@@ -1,0 +1,6 @@
+datasources:af7c19bf4483e72bfaf2f4ed7b8d81da67e49b84
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:8b0a407ff69a3d68c15d32b2d7bc8bf523057565
+--suite Suites.Fistrob
+--suite Suites.Fistrob2

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.6 on win32)" generated="20210922 23:19:34.401" rpa="false">
+<suite id="s1" name="Fistrob &amp; Fistrob2">
+<suite id="s1-s1" name="Fistrob" source="C:\Users\nehal\eclipse-workspace_Old\RoboFramework2\Demo\Fistrob.robot">
+<test id="s1-s1-t1" name="Valid Login Test">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${appUrl}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210922 23:19:34.909" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20210922 23:19:34.908" endtime="20210922 23:19:40.032"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210922 23:19:40.034" endtime="20210922 23:19:40.185"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210922 23:19:40.187" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20210922 23:19:40.186" endtime="20210922 23:19:40.495"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='txtPassword']</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210922 23:19:40.497" level="INFO">Typing text 'admin123' into text field 'xpath://input[@id='txtPassword']'.</msg>
+<status status="PASS" starttime="20210922 23:19:40.496" endtime="20210922 23:19:40.795"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210922 23:19:40.797" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20210922 23:19:40.796" endtime="20210922 23:19:43.241"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20210922 23:19:43.289" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/index.php/dashboard</msg>
+<status status="PASS" starttime="20210922 23:19:43.242" endtime="20210922 23:19:43.289"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<status status="PASS" starttime="20210922 23:19:43.290" endtime="20210922 23:19:43.292"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>dashboard</arg>
+</arguments>
+<status status="PASS" starttime="20210922 23:19:43.294" endtime="20210922 23:19:43.296"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210922 23:19:43.299" endtime="20210922 23:19:45.714"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20210922 23:19:34.907" endtime="20210922 23:19:45.717" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="InValid Login Test">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${appUrl}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210922 23:19:45.727" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20210922 23:19:45.726" endtime="20210922 23:19:50.461"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210922 23:19:50.462" endtime="20210922 23:19:50.628"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:txtUsernam</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210922 23:19:50.632" level="INFO">Typing text 'Admin' into text field 'id:txtUsernam'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210922 23:19:51.444" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210922 23:19:50.681" endtime="20210922 23:19:51.444"></status>
+</kw>
+<msg timestamp="20210922 23:19:51.449" level="FAIL">Element with locator 'id:txtUsernam' not found.</msg>
+<status status="FAIL" starttime="20210922 23:19:50.629" endtime="20210922 23:19:51.449"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210922 23:19:51.451" endtime="20210922 23:19:53.802"></status>
+</kw>
+<tags>
+<tag>Regression</tag>
+</tags>
+<status status="FAIL" starttime="20210922 23:19:45.724" endtime="20210922 23:19:53.804" critical="yes">Element with locator 'id:txtUsernam' not found.</status>
+</test>
+<status status="FAIL" starttime="20210922 23:19:34.457" endtime="20210922 23:19:53.813"></status>
+</suite>
+<suite id="s1-s2" name="Fistrob2" source="C:\Users\nehal\eclipse-workspace_Old\RoboFramework2\Demo\Fistrob2.robot">
+<test id="s1-s2-t1" name="Valid Login Test">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${appUrl}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210922 23:19:53.847" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20210922 23:19:53.846" endtime="20210922 23:19:58.766"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210922 23:19:58.768" endtime="20210922 23:19:58.952"></status>
+</kw>
+<kw name="Enter Username">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210922 23:19:58.961" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20210922 23:19:58.960" endtime="20210922 23:19:59.336"></status>
+</kw>
+<status status="PASS" starttime="20210922 23:19:58.959" endtime="20210922 23:19:59.337"></status>
+</kw>
+<kw name="Enter Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='txtPassword']</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210922 23:19:59.341" level="INFO">Typing text 'admin123' into text field 'xpath://input[@id='txtPassword']'.</msg>
+<status status="PASS" starttime="20210922 23:19:59.340" endtime="20210922 23:19:59.706"></status>
+</kw>
+<status status="PASS" starttime="20210922 23:19:59.339" endtime="20210922 23:19:59.706"></status>
+</kw>
+<kw name="Click on Login Button">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210922 23:19:59.708" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20210922 23:19:59.707" endtime="20210922 23:20:02.606"></status>
+</kw>
+<status status="PASS" starttime="20210922 23:19:59.707" endtime="20210922 23:20:02.607"></status>
+</kw>
+<kw name="Verify the url">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20210922 23:20:02.627" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/index.php/dashboard</msg>
+<status status="PASS" starttime="20210922 23:20:02.610" endtime="20210922 23:20:02.627"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<status status="PASS" starttime="20210922 23:20:02.628" endtime="20210922 23:20:02.629"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>dashboard</arg>
+</arguments>
+<status status="PASS" starttime="20210922 23:20:02.630" endtime="20210922 23:20:02.631"></status>
+</kw>
+<status status="PASS" starttime="20210922 23:20:02.608" endtime="20210922 23:20:02.634"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210922 23:20:02.635" endtime="20210922 23:20:05.038"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20210922 23:19:53.844" endtime="20210922 23:20:05.040" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210922 23:19:53.828" endtime="20210922 23:20:05.043"></status>
+</suite>
+<status status="FAIL" starttime="20210922 23:19:34.404" endtime="20210922 23:20:05.050"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Regression</stat>
+<stat pass="2" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="Fistrob &amp; Fistrob2">Fistrob &amp; Fistrob2</stat>
+<stat pass="1" fail="1" id="s1-s1" name="Fistrob">Fistrob &amp; Fistrob2.Fistrob</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Fistrob2">Fistrob &amp; Fistrob2.Fistrob2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

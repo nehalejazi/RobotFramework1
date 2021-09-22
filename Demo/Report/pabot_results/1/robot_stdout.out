@@ -1,0 +1,17 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Fistrob2                                                               
+==============================================================================
+Valid Login Test                                                      https://opensource-demo.orangehrmlive.com/index.php/dashboard
+| PASS |
+------------------------------------------------------------------------------
+Suites.Fistrob2                                                       | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\nehal\eclipse-workspace_Old\RoboFramework2\Demo\Report\pabot_results\1\output.xml
